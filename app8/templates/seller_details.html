@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="violet">
+    <center>
+        <h2>Seller Details</h2>
+        <form action="/seller_insert/" method="POST">
+            {% csrf_token %}
+            Seller Name : <input type="text" name="seller_name"><br><br>
+            Seller id : <input type="text" name="seller_id"><br><br>
+            Age  : <input type="int" name="seller_age"><br><br>
+            Experience  : <input type="int" name="seller_exp"><br><br>
+            Salary : <input type="int" name="seller_salary"><br><br>
+            <input type="submit" value="ok"><br><br><br>
+ 
+        </form>
+    </center>
+    
+</body>
+</html>

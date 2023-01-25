@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="violet">
+    <center>
+        <h1>Seller View</h1>
+        <table border="1">
+
+            <thead>
+                 <th>Seller Name</th>
+                 <th>Seller Id</th>
+                 <th>Seller Age</th>
+                 <th>Seller Experience</th>
+                 <th>Seller Salary</th>
+                 <th>Link</th>
+                 <th>Link</th>
+            </thead>
+            {% for i in ob1 %}
+            <tr>
+                 <td>{{i.seller_name}}</td>
+                 <td>{{i.seller_id}}</td>
+                 <td>{{i.seller_age}}</td>
+                 <td>{{i.seller_exp}}</td>
+                 <td>{{i.seller_salary}}</td>
+                 <td><a href="/seller_update/{{i.id}}">Update</a></td>
+                 <td><a href="/seller_delete/{{i.id}}">Delete</a></td> 
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>

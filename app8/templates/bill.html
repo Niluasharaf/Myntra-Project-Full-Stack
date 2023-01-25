@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+
+<div class="container py-3">
+    <div class="row py-5">
+        <div class="col-12 text-center">
+          
+             
+              
+        <h2>TOTAL BILL</h2>
+        <h4>Item Name:{{iname}}</h4>
+        <h5>Total Bill:{{total}}</h5>
+        <a href="/"><button class="btn btn-secondary">Add Shipping</button></a>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

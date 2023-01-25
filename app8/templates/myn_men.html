@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra Men</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/pro8/app8/templates/myn_about.html">
+    <link rel="stylesheet" href="/pro8/app8/static/css/myntra_style.css">
+    
+    <link rel="stylesheet" href="/pro8/app8/templates/myn_men.html">
+    <link rel="stylesheet" href="/pro8/app8/templates/myn_women.html">
+    <link rel="stylesheet" href="/pro8/app8/templates/myn_history.html">
+    <link rel="stylesheet" href="/pro8/app8/templates/myn_contact.html">
+    
+    
+    <link rel="stylesheet" href="{% static '/css/myntra_style.css' %}">
+   
+
+  </head>
+
+  
+
+<body>
+
+  
+
+<!--navbar-->
+<nav class="navbar navbar-expand-sm bg-white ">
+  <div class="container-fluid">
+    <a class="navbar-brand px-5" href="{% url 'home' %}"><img src="{% static '/images/myntra.png' %}" alt="myntra" style="width: 40px;" class="rounded-pill"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav px-5 " style="font-family: poppins; font-size: smaller;">
+        <li class="nav-item">
+          <a class="nav-link   ms-4" href="{% url 'home' %}">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link   ms-4" href="{% url 'about' %}">ABOUT</a>
+        </li>
+
+        
+         <li class="nav-item ">
+          
+            <a class="nav-link  ms-4" href="{% url 'men' %}">MEN</a>
+              </li>
+              <li class="nav-item "> 
+            <a class="nav-link  ms-4 " href="{% url 'women' %}">WOMEN</a>
+          </li>
+          
+        
+        <li class="nav-item">
+          <a class="nav-link  ms-4" href="{% url 'contact' %}">CONTACT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  ms-4" href="{% url 'history' %}">HISTORY</a>
+        </li>
+      </ul>
+
+
+      <form class="d-flex px-5">
+        <input class="form-control me-2 " type="text" placeholder="Search for your products..">
+        <button class="btn" type="button">Go</button>
+
+        
+      </form>
+
+      
+
+      <div class=" px-4 ">
+        <a href="/signin" data-bs-toggle="tooltip"  title="My Profile"><i class="bi bi-person-fill fs-4 px-2 text-dark"></i></a>
+        <a href="#" data-bs-toggle="tooltip"  title="My Cart"><i class="bi bi-cart4 fs-4 px-2 text-dark"></i></a>
+        <a href="#" data-bs-toggle="tooltip"  title="My Wishlist"><i class="bi bi-heart fs-5 px-2 text-dark"></i></a>
+    
+      </div>
+      
+    </div>
+  </div>
+</nav>
+
+
+
+   
+      <!--side1+side2-->
+
+
+    <section class="men">
+      <div class="container-fluid ">
+
+        <div class="row pt-0">
+          <div class="sidecolumn col-lg-2  text-center pt-0">
+            <div>
+              <hr>
+              <h6>CLOTHING</h6>
+              <hr>
+  
+              <a href="#">All Clothing</a><br>
+              <a href="#">Jackets And Coats</a><br>
+              <a href="#">Jumpers And Cardigans</a><br>
+              <a href="#">Shirts</a><br>
+              <a href="#">Shorts And Swim Wear</a><br>
+              <a href="#">Under Wear</a><br>
+              <a href="#">Nightware And Pyjamas</a><br>
+              <a href="#">Socks</a><br>
+              <a href="#">Shoes</a><br>
+              <a href="#">Sports Wear</a><br><br>
+
+            <hr>
+            <h6>SUITS AND FORMALWEAR</h6>
+            <hr>
+            <a href="#">Blazers And Formal Jackets</a><br>
+              <a href="#">Formal Shirts</a><br>
+              <a href="#">Formal Trousers</a><br>
+              <a href="#">Suits</a><br>
+              <a href="#">Linen Suits</a><br>
+              <a href="#">Waist Coat</a><br>
+              <a href="#">Ties And Pocket Squares</a><br><br>
+
+
+              <hr>
+            <h6>FOOTWEARS</h6>
+            <hr>
+             <a href="#">All Footwear</a><br>
+              <a href="#">Formal Shirts</a><br>
+              <a href="#">Boots</a><br>
+              <a href="#">Shoes</a><br>
+              <a href="#">Sandals,Slippers,FlipFlops</a><br>
+              <a href="#">Trainers</a><br>
+              <a href="#">Ties And Pocket Squares</a><br><br>
+
+
+              <hr>
+              <h6>SHOP BY BRAND</h6>
+              <hr>
+               <a href="#">All Brands</a><br>
+                <a href="#">Lacoste</a><br>
+                <a href="#">Hugo Boss</a><br>
+                <a href="#">Calvin Clein</a><br>
+                <a href="#">Super Dry</a><br>
+                <a href="#">Lyle And Scott</a><br>
+                <a href="#">Tommy Hillfiger</a><br><br>
+
+
+              <hr>
+              <h6>ACCESSORIES</h6>
+              <hr>
+               <a href="#">All Accessories</a><br>
+                <a href="#">New In</a><br>
+                <a href="#">Belts And Braces</a><br>
+                <a href="#">Hats</a><br>
+                <a href="#">Sunglass</a><br>
+                <a href="#">Wallets</a><br>
+              </div>
+            
+
+          </div>
+
+          <div class="col-lg-10 side2 ">
+            <!--top quote-->
+            <div class="row">
+              <div class="col-lg-8 text-center mx-auto py-5" style="font-family:lobster,cursive;">
+                <h2>Just landed,stamping its style on the world of premium outfits</h2>
+                <h6>Classy Ones For Your Wardrobe</h6>
+              </div>
+              <div class="row pb-5 ">
+                <div class="col-lg-10 text-center mx-auto pb-5">
+                  <a href="#pro" class="btn btn-lg rounded-pill p-2 mx-3 btn-outline-danger">T-Shirts</a>
+                  <a href="#pro" class=" btn btn-lg rounded-pill px-2 mx-3 btn-outline-danger">Jackets</a>
+                  <a href="#pro" class=" btn btn-lg rounded-pill px-3 mx-3 btn-outline-danger">Shirts</a>
+                  <a href="#pro" class="btn btn-lg rounded-pill px-3 mx-3 btn-outline-danger">Jeans</a>
+                  <a href="#pro" class="btn btn-lg rounded-pill px-3 mx-3 btn-outline-danger">Shorts</a>
+                  <a href="#pro" class="btn btn-lg rounded-pill p-2 mx-3 btn-outline-danger">Watches</a>
+                  <a href="#pro" class="btn btn-lg rounded-pill px-3 mx-3 btn-outline-danger">Shoes</a>
+                </div>
+              </div>
+             
+
+            
+            </div>
+            <!--top image end-->
+
+           
+            <div class="row products p-5" id="pro" >
+
+              {% for i in ob1 %}
+
+              <div class="col-lg-3 text-center mx-auto py-5 ">
+                 <div class="card mb-2 bg-light" style="height: 300px;">
+                    <div class="card-body" style="height: 300px;">
+                      <img src="{{i.image.url}}" class="card-img-top" alt="{{i.product_name}}" style="height: 250px; width:auto">
+                    </div>
+                 </div>
+                 <h6>{{i.product_name}}</h6>
+                 <h6>INR {{i.product_price}}.00</h6>
+                 
+                <a class=" btn btn-lg btn-outline-danger rounded-pill p-1 fs-6" style="text-decoration: none" 
+                href="/products/{{i.id}}">SHOP NOW</a><br> 
+              </div>
+
+              
+               {% endfor %}
+          </div>
+           
+<!--
+              <div class="col-lg-3 text-center mx-1">
+                <div class="card mb-2">
+                  <div class="card-body">
+                    <img src="/pro8/app8/static/Myntra/images/banner/myntra5.jpg" style="height: 300px;" class="card-img-top" alt="men">
+                  </div>
+                 </div>
+                 <h6>Summer Shop</h6>
+                 <button type="button" class=" btn btn-lg btn-outline-danger rounded-pill p-1 fs-6">SHOP NOW</button>
+              </div>
+           
+
+              
+
+              <div class="col-lg-3 text-center mx-auto">
+                <div class="card mb-2">
+                  <div class="card-body">
+                    <img src="/pro8/app8/static/Myntra/images/banner/myn_men2.jpg" class="card-img-top" alt="men">
+                  </div>
+                 </div>
+                 <h6>Occasion Wear</h6>
+                 <button type="button" class=" btn btn-lg btn-outline-danger rounded-pill p-1 fs-6">SHOP NOW</button>
+              </div> -->
+
+            </div>
+
+            <!--row2-->
+            <!-- <div class="row p-5 ">
+
+
+              <div class="col-lg-3 text-center  mx-auto">
+                 <div class="card mb-2">
+                  <div class="card-body">
+                    <img src="/pro8/app8/static/Myntra/images/banner/images (5).jpg" style="height: 300px;" class="card-img-top" alt="men">
+                  </div>
+                 </div>
+                 <h6>Denim</h6>
+                 <button type="button" class=" btn btn-lg btn-outline-danger rounded-pill p-1 fs-6">SHOP NOW</button>
+              </div>
+
+
+              <div class="col-lg-3 text-center  mx-auto">
+                <div class="card mb-2">
+                  <div class="card-body">
+                    <img src="/pro8/app8/static/Myntra/images/banner/myn_men6.jpg" style="height: 300px;" class="card-img-top" alt="men">
+                  </div>
+                 </div>
+                 <h6>Sporty Styles</h6>
+                 <button type="button" class=" btn btn-lg btn-outline-danger rounded-pill p-1 fs-6">SHOP NOW</button>
+              </div>
+           
+
+              
+
+              <div class="col-lg-3 text-center  mx-auto">
+                <div class="card mb-2">
+                  <div class="card-body">
+                    <img src="/pro8/app8/static/Myntra/images/banner/myn_men5.jpg" style="height: 300px;" class="card-img-top" alt="men">
+                  </div>
+                 </div>
+                 <h6>Trending:Dip  Tie Dye</h6>
+                 <button type="button" class=" btn btn-lg btn-outline-danger rounded-pill p-1 fs-6">SHOP NOW</button>
+              </div>
+
+            </div>
+            row2 end-->
+
+            <!--row3 start yellow-->
+            <div class="row newin py-6">
+
+              <div class="col-lg-4 text-center m-auto">
+                <h5>NEW IN</h5>
+                <p>Stay ahead of the style curve of our latest arrivals</p>
+                <a  href="#pro" class=" btn btn-lg btn-outline-danger rounded-pill px-1 fs-6">Shop New In</a>
+                
+              </div>
+
+              <div class="col-lg-8 ">
+                <div class="card-body">
+                <img src="{% static '/images/drake-s-takes-vKnRYW-mtek-unsplash.jpg' %}" style="height: 390px; width: 850px;" class="card-img-top" alt="men">
+              </div>
+            </div>
+              
+          </div> 
+
+
+            <!--row3 end yellow-->
+
+              </div>
+
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="container" >
+      <hr>
+    </div>
+       
+
+ 
+
+   <!--footer-->
+   <section id="footer">   
+    <div class="container bg-white " >
+     <div class="row " >
+         <div class="col-lg-3" style="margin-top: 20px;">
+             
+             <ul class="foot m-auto" style="list-style-type:none;"  >
+                 <h5 >Explore</h5><br>
+                 <li> <a href="#">Sale</a></li>
+                 <li> <a href="#">Store Locator</a></li>
+                 <li> <a href="#">Gift Card</a></li>
+             </ul>
+         </div>
+         
+         <div class="col-lg-3" style="margin-top: 20px;">
+             <ul class="foot" style="list-style-type: none;">
+                 <h5>About</h5><br>
+                 <li> <a href="#">Feedback</a></li>
+                 <li> <a href="#">Careers</a></li>
+                 <li> <a href="#">Take a tour</a></li>
+             </ul>
+         </div>
+ 
+         <div class="col-lg-3" style="margin-top: 20px;">
+             <ul class="foot" style="list-style-type: none;">
+                 <h5>Help</h5><br>
+                 <li > <a href="#">Contact Us</a></li>
+                 <li> <a href="#">Shipping</a></li>
+                 <li> <a href="#">Return Policy</a></li>
+             </ul>
+         </div>
+ 
+         <div class="col-lg-3 mt-5 text-center">
+           <img src="{% static '/images/myntra.png' %}" style="width: 100px; height:100px" class="rounded-pill">
+         </div>
+ 
+       </div>
+     </div>
+    </div>
+   </section>
+ 
+ 
+ 
+   <!--COPYright-->
+   <div class="container-fluid  bg-secondary pt-2">
+     <div class="row">
+       <div class="col-sm-12 text-center">
+         <p>Copyright &copy; 2022 Myntra - All rights reserved</p>
+       </div>
+     </div>
+   </div>
+   <!--COPYright end-->
+        
+        
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+   integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+   crossorigin="anonymous"></script>
+
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+<script src="/js/bootstrap.js"></script>
+</body>
+</html>

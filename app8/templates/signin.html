@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+<!--===============================================================================================-->
+
+<link rel="stylesheet" href="{% static 'css/myntra_style.css' %}">
+
+</head>
+<body>
+
+
+<!--navbar-->
+<nav class="navbar navbar-expand-sm bg-white ">
+	<div class="container">
+	  <a class="navbar-brand px-5" href="{% url 'home' %}"><img src="{% static '/images/myntra.png' %}" alt="myntra" style="width: 40px;" class="rounded-pill"></a>
+	  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<ul class="navbar-nav px-4 " style="font-family: poppins; font-size: smaller;">
+		  <li class="nav-item">
+			<a class="nav-link   ms-4" href="{% url 'home' %}">HOME</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link   ms-4" href="{% url 'about' %}">ABOUT</a>
+		  </li>
+  
+		  
+		   <li class="nav-item ">
+			
+			  <a class="nav-link  ms-4" href="{% url 'men' %}">MEN</a>
+				</li>
+				<li class="nav-item "> 
+			  <a class="nav-link  ms-4 " href="{% url 'women' %}">WOMEN</a>
+			</li>
+			
+		  
+		  <li class="nav-item">
+			<a class="nav-link  ms-4" href="{% url 'contact' %}">CONTACT</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link  ms-4" href="{% url 'history' %}">HISTORY</a>
+		  </li>
+		</ul>
+  
+  
+		<form class="d-flex px-5">
+		  <input class="form-control me-2 " type="text" placeholder="Search for your products..">
+		  <button class="btn mx-4" type="button">Go</button>
+  
+		  
+		</form>
+  
+		
+  
+		<div class=" px-4 arktex">
+		  <a href="/signin" data-bs-toggle="tooltip"  title="My Profile"><i class="bi bi-person-fill fs-4 px-2 text-dark"></i></a>
+		  <a href="#" data-bs-toggle="tooltip"  title="My Cart"><i class="bi bi-cart4 fs-4 px-2 text-dark"></i></a>
+		  <a href="#" data-bs-toggle="tooltip"  title="My Wishlist"><i class="bi bi-heart fs-5 px-2 text-dark"></i></a>
+	  
+		</div>
+		
+	  </div>
+	</div>
+  </nav>
+	
+	<div class="limiter">
+		<div class="container-login100 bg-primary ">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt  " data-tilt>
+					<img src="{% static '/images/myntra.png' %}" alt="IMG">
+				</div>
+
+				<form class="login100-form validate-form" action="/signin_insert/" method="POST">
+					{% csrf_token %}
+					<span class="login100-form-title">
+					 LOGIN
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="username" placeholder="Username">
+						<span class="focus-input100"></span>
+					<!-- 	<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span> -->
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input class="input100" type="password" name="password" placeholder="Password">
+						<span class="focus-input100"></span>
+						<!-- <span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span> -->
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" style="background-color:rgb(187, 92, 92) ;">
+							Login
+						</button>
+					</div>
+
+					
+ 
+					<div class="text-center p-t-13">
+						<a class="txt2" href="/signup">
+							Create your Account
+							
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/tilt/tilt.jquery.min.js' %}"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

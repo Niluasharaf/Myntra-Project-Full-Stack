@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="violet">
+    <center>
+        <h2>Seller Update</h2>
+        <form action="/seller_update_insert/{{ob1.id}}" method="POST">
+            {% csrf_token %}
+            Seller Name : <input type="text" name="seller_name" value="{{ob1.seller_name}}"><br><br>
+            Seller Id : <input type="text" name="seller_id" value="{{ob1.seller_id}}"><br><br>
+            Seller Age : <input type="int" name="seller_age" value="{{ob1.seller_age}}"><br><br>
+            Seller Experience : <input type="int" name="seller_exp" value="{{ob1.seller_exp}}"><br><br>
+            Seller Salary : <input type="int" name="seller_salary" value="{{ob1.seller_salary}}"><br><br>
+            
+            <input type="submit" value="Save">
+        </form>
+    </center>
+</body>
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Myntra Women</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  
+  <link rel="stylesheet" href="/pro8/app8/templates/myn_about.html">
+    <link rel="stylesheet" href="/pro8/app8/templates/myn_men.html">
+    <link rel="stylesheet" href="/pro8/app8/templates/myn_women.html">
+    <link rel="stylesheet" href="/pro8/app8/templates/myn_history.html">
+    <link rel="stylesheet" href="/pro8/app8/templates/myn_contact.html">
+    <link rel="stylesheet" href="/pro8/app8/static/css/myntra_style.css">
+    
+    <link rel="stylesheet" href="{% static '/css/myntra_style.css' %}">
+    <style>
+      .yellowside{
+        background-image: url("{% static '/images/felipe-galvan-AhfrA5VQNpM-unsplash.jpg' %}");
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:cover;
+        margin-top: 15px;
+        height:80vh;
+        
+        
+      }
+      
+    </style>
+</head>
+
+
+<body>
+
+
+
+ <!--Navbar-->
+ <nav class="navbar navbar-expand-sm bg-white ">
+  <div class="container-fluid">
+    <a class="navbar-brand px-5" href="{% url 'home' %}"><img src="{% static '/images/myntra.png' %}" alt="myntra" style="width: 40px;" class="rounded-pill"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav  px-3 " style="font-family: poppins; font-size:smaller;">
+
+        <li class="nav-item">
+          <a class="nav-link   ms-4" href="{% url 'home' %}">HOME</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link   ms-4" href="{% url 'about' %}">ABOUT</a>
+        </li>
+
+        
+        <li class="nav-item ">
+        <a class="nav-link  ms-4" href="{% url 'men' %}">MEN</a>
+         </li>
+
+        <li class="nav-item "> 
+          <a class="nav-link  ms-4 " href="{% url 'women' %}">WOMEN</a>
+        </li>
+          
+        
+        <li class="nav-item">
+          <a class="nav-link  ms-4" href="{% url 'contact' %}">CONTACT</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link  ms-md-4" href="{% url 'history' %}">HISTORY</a>
+        </li>
+      </ul>
+
+        <form class="d-flex px-5">
+           <input class="form-control me-2 " type="text" placeholder="Search for your products..">
+           <button class="btn  " type="button">Go</button>
+        </form>
+
+      <div class=" px-4 ">
+        <a href="/signin" data-bs-toggle="tooltip"  title="My Profile"><i class="bi bi-person-fill fs-4 px-2 text-dark"></i></a>
+        <a href="#" data-bs-toggle="tooltip"  title="My Cart"><i class="bi bi-cart4 fs-4 px-2 text-dark"></i></a>
+        <a href="#" data-bs-toggle="tooltip"  title="My Wishlist"><i class="bi bi-heart fs-5 px-2 text-dark"></i></a>
+    
+      </div>
+      
+    </div>
+  </div>
+</nav>
+
+<!---side1 +side2-->
+
+<section class="women">
+  <div class="container-fluid">
+    <div class="row pt-0">
+      <div class="sidecolumn col-lg-2 text-center pt-0">
+
+        <div>
+          <hr>
+          <h6>CLOTHING</h6>
+          <hr>
+
+          <a href="#">All Clothing</a><br>
+          <a href="#">Jackets And Coats</a><br>
+          <a href="#">Jumpers And Cardigans</a><br>
+          <a href="#">Blouses AndnShirts</a><br>
+          <a href="#">Hoodies And SweetShirts</a><br>
+          <a href="#">Tailored Fits</a><br>
+          <a href="#">Swim And Beaches</a><br>
+          <a href="#">Churidhar</a><br>
+          <a href="#">Maternity Wear</a><br>
+          <a href="#">Leggings</a><br>
+          <a href="#">Skirts</a><br>
+          <a href="#">Sports Wear</a><br><br>
+
+        <hr>
+        <h6>LINGERIE AND NIGHTWARE</h6>
+        <hr>
+        <a href="#">All Lingerie And Innerwears</a><br>
+          <a href="#">All Bras</a><br>
+          <a href="#">All Knickers</a><br>
+          
+
+
+          <hr>
+        <h6>FOOTWEARS</h6>
+        <hr>
+         <a href="#">All Footwear</a><br>
+          <a href="#">Boots</a><br>
+          <a href="#">Flats</a><br>
+          <a href="#">Sandals</a><br>
+          <a href="#">Trainers</a><br>
+          <a href="#">Heels</a><br><br>
+
+
+          <hr>
+          <h6>SHOP BY BRAND</h6>
+          <hr>
+           <a href="#">All Brands</a><br>
+            <a href="#">Lacoste</a><br>
+            <a href="#">Hugo Boss</a><br>
+            <a href="#">Calvin Clein</a><br>
+            <a href="#">Super Dry</a><br>
+            <a href="#">Lyle And Scott</a><br>
+            <a href="#">Tommy Hillfiger</a><br><br>
+
+
+          <hr>
+          <h6>ACCESSORIES</h6>
+          <hr>
+           <a href="#">All Accessories</a><br>
+            <a href="#">New In</a><br>
+            <a href="#">Bags,Wallets,Luggage</a><br>
+            <a href="#">Jwellery And Watches</a><br>
+            <a href="#">Sunglasses</a><br>
+         </div>
+
+         <div class="col-lg-2 py-4 text-center">
+          <img src="{% static 'images/omid-armin-PmB5Uo9dUk4-unsplash.jpg'%}" alt="image" class="card-img-top" 
+            style="height:250px; width:160px" >
+           
+         </div>
+
+
+           
+      </div>
+
+     <div class="col-lg-10">
+           
+           <!--first row-->
+            <div class="row yellowside" >
+                <h1 class="pt-3 m-6">Spring Ready Fashion For Your Wardrobe</h1>
+            </div>
+
+      
+        <!--second row-->
+         <div class="row mt-5 pt-5">
+
+           <div class="newin col-lg-4">
+            <h5>NEW IN</h5>
+            <p>Stay ahead of the style curve of our latest cool arrivals</p>
+            <a href="#pro" type="button" class=" btn btn-lg btn-outline-danger rounded-pill px-2 fs-6">Shop New In</a>
+           </div>
+
+          <div class="col-lg-8">
+            <div class="container">
+              <div class="row">
+
+
+                    <div class="col-lg-3">
+                      <div class="card">
+                        <img src="{% static '/images/valerie-elash-gsKdPcIyeGg-unsplash.jpg' %}" class="card-img-top" alt="women">                   
+                      </div>
+                    </div>
+
+
+                    <div class="col-lg-3">
+                      <div class="card">
+                      <img src="{% static '/images//milada-vigerova-p8Drpg_duLw-unsplash.jpg' %}" style="height: 212px;" class="card-img-top" alt="men">                   
+                      </div>
+                    </div>
+
+
+                   <div class="col-lg-3">
+                    <div class="card">
+                      <img src="{% static '/images/brigitte-tohm-j8C66j15nAk-unsplash.jpg' %}" style="height: 212px;" class="card-img-top" alt="women">
+                      </div>
+                    </div>
+
+                   <div class="col-lg-3">
+                    <div class="card">
+                      <img src="{% static '/images/myn_cloth4.jpg' %}" style="height: 212px;" class="card-img-top" alt="women">
+                    </div>
+                  </div>
+
+               </div>
+              </div> 
+            </div>
+              
+          </div>
+
+             
+          <div class="row products p-5" id="pro" >
+
+            {% for i in ob1 %}
+
+             <div class="col-lg-3 text-center mx-auto py-5 ">
+                <div class="card mb-2 bg-light" style="height: 300px; ">
+                  <div class="card-body" style="height: 300px;">
+                  <img src="{{i.image.url}}" class="card-img-top" alt="{{i.product_name}}" style="height: 250px;">
+                  </div>
+                </div>
+                 <h6>{{i.product_name}}</h6>
+                  <h6>INR {{i.product_price}}.00</h6>
+         
+                  <a class=" btn btn-lg btn-outline-danger rounded-pill p-1 fs-6" style="text-decoration: none" href="">SHOP NOW</a><br> 
+             </div>
+
+      
+            {% endfor %}
+          </div>
+
+
+        </div>  <!--col-lg-10  closing div-->
+       
+        <!--second row end-->
+
+
+        <!--third card row start-->
+
+           
+             
+            
+
+<!-- 
+          <div class="row mt-5">
+
+            <div class="col-lg-4 text-center mx-auto py-4 ">
+              
+                <div class="card-body py-1">
+                  <img src="/pro8/app8/static/Myntra/images/banner/jonathan-borba-HMhRTbuSEhY-unsplash.jpg" style="height: 350px; width:300px" class="card-img-top" alt="women">
+                </div>
+                  <h5>WESTERN</h5>
+                  <button type="button" class=" btn btn-lg btn-outline-danger rounded-pill p-1 fs-6">Shop Now</button>
+              
+            </div>
+
+            <div class="col-lg-4 text-center mx-auto py-4 ">
+              
+              <div class="card-body py-1 ">
+                <img src="/pro8/app8/static/Myntra/images/banner/junior-reis-_vmoFgZc8c0-unsplash.jpg" style="height: 350px; width:300px" class="card-img-top" alt="women">
+              </div>
+                <h5>LONG GOWN</h5>
+                <button type="button" class=" btn btn-lg btn-outline-danger rounded-pill p-1 fs-6">Shop Now</button>
+            
+              </div>
+
+
+            
+          </div>
+
+        third card row_end-->
+
+
+        <!--fourth card row start-->
+        <!-- <div class="row">
+
+          <div class="col-lg-4 text-center mx-auto py-4 ">
+            
+              <div class="card-body py-1">
+                <img src="/pro8/app8/static/Myntra/images/banner/r-n-tyfqOL1FAQc-unsplash.jpg" style="height: 350px; width:300px" class="card-img-top" alt="women">
+              </div>
+                <h5>CLASSY</h5>
+                <button type="button" class=" btn btn-lg btn-outline-danger rounded-pill p-1 fs-6">Shop Now</button>
+            
+          </div>
+
+          <div class="col-lg-4 text-center mx-auto py-4 ">
+            
+            <div class="card-body py-1 ">
+              <img src="/pro8/app8/static/Myntra/images/banner/omar-lopez-9w20MZ0lsK8-unsplash.jpg" style="height: 350px; width:300px" class="card-img-top" alt="women">
+            </div>
+              <h5>COATS AND JACKETS</h5>
+              <button type="button" class=" btn btn-lg btn-outline-danger rounded-pill p-1 fs-6">Shop Now</button>
+          
+          </div>
+
+         
+          
+        </div> -->
+
+      <!--fourth card row_end-->
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<div class="container" >
+  <hr>
+</div>
+
+
+
+
+<section id="footer mt-5 ">   
+<div class="container bg-white " >
+<div class="row " >
+  <div class="col-md-3" style="margin-top: 20px;">
+      
+      <ul class="foot m-auto" style="list-style-type:none;"  >
+          <h5 >Explore</h5><br>
+          <li> <a href="#">Sale</a></li>
+          <li> <a href="#">Store Locator</a></li>
+          <li> <a href="#">Gift Card</a></li>
+      </ul>
+  </div>
+  
+  <div class="col-md-3" style="margin-top: 20px;">
+      <ul class="foot" style="list-style-type: none;">
+          <h5>About</h5><br>
+          <li> <a href="#">Feedback</a></li>
+          <li> <a href="#">Careers</a></li>
+          <li> <a href="#">Take a tour</a></li>
+      </ul>
+  </div>
+
+  <div class="col-md-3" style="margin-top: 20px;">
+      <ul class="foot" style="list-style-type: none;">
+          <h5>Help</h5><br>
+          <li > <a href="#">Contact Us</a></li>
+          <li> <a href="#">Shipping</a></li>
+          <li> <a href="#">Return Policy</a></li>
+      </ul>
+  </div>
+
+  <div class="col-md-3" style="text-align: center; margin-top: 5px;">
+    <img src="/Myntra/images/banner/myntra.png" alt="appicon" width="200px" height="180px">
+  </div>
+
+</div>
+</div>
+</div>
+</section>
+
+
+
+<!--COPYright-->
+<div class="container-fluid  bg-secondary pt-2">
+<div class="row">
+<div class="col-sm-12 text-center">
+  <p>Copyright &copy; 2022 Myntra - All rights reserved</p>
+</div>
+</div>
+</div>
+<!--COPYright end-->
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+crossorigin="anonymous"></script>
+
+ 
+ 
+
+ <link href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+      <script src="/js/bootstrap.js"></script>
+</body>
+
+</html>

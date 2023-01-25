@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+<div class="container py-3">
+    <div class="row py-5">
+        <div class="col-12 text-center">
+            <h1 class="text-center">Order</h1>
+
+            <form action="../bill_order/" method="POST">
+                 {% csrf_token %}
+                 {% for i in ob1 %}
+                <label>Product Name</label><br>
+                <input type="text" value="{{i.product_name}}" name="iname"><br>
+                <label>Product Price</label><br>
+                <input type="number" value="{{i.product_price}}" name="iprice"><br>
+                <label>Quantity</label><br>
+                <input type="number" name="quantity"><br><br>
+                <input type="submit" name="BUY">
+            
+                 {% endfor%}     
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

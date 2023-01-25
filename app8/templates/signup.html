@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra-Sign Up</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="myn_about.html">
+    <link rel="stylesheet" href="myn_men.html">
+    <link rel="stylesheet" href="myn_women.html">
+    <link rel="stylesheet" href="myn_history.html">
+    <link rel="stylesheet" href="myn_contact.html">
+    <link rel="stylesheet" href="myntra.html">
+    <link rel="stylesheet" href="myntra_style.css">
+
+    <link rel="stylesheet" href="{% static 'css/myntra_style.css' %}">
+</head>
+
+
+<body >
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-sm bg-white ">
+    <div class="container-fluid">
+      <a class="navbar-brand px-5" href="{% url 'home' %}"><img src="{% static '/images/myntra.png' %}" alt="myntra" style="width: 40px;" class="rounded-pill"></a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+       <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+        <ul class="navbar-nav  px-3 " style="font-family: poppins; font-size:smaller;">
+       
+          <li class="nav-item">
+            <a class="nav-link   ms-4" href="{% url  'home' %}">HOME</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link   ms-4" href="{% url  'about' %}">ABOUT</a>
+          </li>
+
+          
+          <li class="nav-item ">
+              <a class="nav-link  ms-4" href="{% url  'men' %}">MEN</a>
+          </li>
+
+          <li class="nav-item "> 
+            <a class="nav-link  ms-4 " href="{% url  'women' %}">WOMEN</a>
+           </li>
+            
+          
+          <li class="nav-item">
+            <a class="nav-link  ms-4" href="{% url  'contact' %}">CONTACT</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link  ms-4" href="{% url  'history' %}">HISTORY</a>
+          </li>
+        </ul>
+
+
+        <form class="d-flex px-5">
+          <input class="form-control me-2 " type="text" placeholder="Search for your products..">
+          <button class="btn" type="button">Go</button>
+
+        </form>
+
+        <div class=" px-4 ">
+
+          <a href="/signin" data-bs-toggle="tooltip"  title="My Profile"><i class="bi bi-person-fill fs-4 px-2"></i></a>
+          <a href="#" data-bs-toggle="tooltip"  title="My Cart"><i class="bi bi-cart4 fs-4 px-2"></i></a>
+          <a href="#" data-bs-toggle="tooltip"  title="My Wishlist"><i class="bi bi-heart fs-5 px-2"></i></a>
+          
+      
+        </div>
+        
+      </div>
+
+      
+    </div>
+  </nav>
+
+
+
+    
+    <div class=" container regform pb-2 text-center pt-5 ">
+        <form action="/signup_insert/" method="POST">
+            {% csrf_token %}
+
+            <h1>Sign Up Here</h1><br><br>
+
+            <label>Name :</label>
+            <input type="text" name="customer_name" placeholder="Your Name" ><br><br>
+
+            <label>Address :</label>
+            <input type="text" name="customer_address" placeholder="Your Address" ><br><br>
+
+            <label>Phone :</label>
+            <input type="text" name="customer_phone"placeholder=" Your Phone Number" ><br><br>
+
+            <label>Place :</label>
+            <input type="text" name="customer_place" placeholder="Your Place" ><br><br>
+
+            <input type="submit" placeholder="Sign Up">
+
+            
+
+    
+        </form>
+    </div>
+
+
+
+    
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  
+    
+<link href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+<script src="/js/bootstrap.js"></script>
+    
+</body>
+</html>

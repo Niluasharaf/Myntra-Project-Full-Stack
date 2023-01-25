@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="violet">
+    <center>
+        <h2>Products View</h2>
+        <table border="1">
+            
+            <thead>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>offer</th>
+                <th>item</th>
+                
+           </thead>
+           {% for i in ob1 %}
+           <tr>
+                <td>{{i.product_name}}</td>
+                <td>{{i.product_quantity}}</td>
+                <td>{{i.product_price}}</td>
+                <td>{{i.product_offer}}</td>
+                <td><img src="{{i.image.url}}"height="100"width="100"></td>
+                
+                
+           </tr>
+           {% endfor %}
+        </table>
+    </center>
+    
+
+    
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/pro8/app8/templates//myn_about.html">
+  <link rel="stylesheet" href="/pro8/app8/templates/myn_men.html">
+  <link rel="stylesheet" href="/pro8/app8/templates/myn_women.html">
+
+  <link rel="stylesheet" href="/pro8/app8/templates/myn_contact.html">
+  <link rel="stylesheet" href="{% static '/css/myntra_style.css' %}">
+
+</head>
+
+<body>
+
+  <!--Navbar-->
+
+  <nav class="navbar navbar-expand-sm bg-white ">
+    <div class="container">
+      <a class="navbar-brand " href="{% url 'home' %}"><img src="{% static '/images/myntra.png' %}" alt="myntra" style="width: 40px;" class="rounded-pill"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav mx-auto " style="font-family: poppins; font-size: smaller;">
+          <li class="nav-item">
+            <a class="nav-link   ms-4" href="{% url 'home' %}">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link   ms-4" href="{% url 'about' %}">ABOUT</a>
+          </li>
+  
+          
+           <li class="nav-item ">
+            
+              <a class="nav-link  ms-4" href="{% url 'men' %}">MEN</a>
+                </li>
+                <li class="nav-item "> 
+              <a class="nav-link  ms-4 " href="{% url 'women' %}">WOMEN</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link ms-4" href="{% url 'contact' %}">CONTACT</a>
+            </li>
+            
+          
+          
+          <li class="nav-item">
+            <a class="nav-link  ms-4" href="{% url 'history' %}">HISTORY</a>
+          </li>
+        </ul>
+        <form class="d-flex ">
+          <input class="form-control me-2  " type="text" placeholder="Search for yours..">
+          <button class="btn " type="button">Go</button>
+        </form>
+
+        <div class=" px-4 ">
+          <a href="/signin" data-bs-toggle="tooltip"  title="My Profile"><i class="bi bi-person-fill fs-4 px-2"></i></a>
+          <a href="#" data-bs-toggle="tooltip"  title="My Cart"><i class="bi bi-cart4 fs-4 px-2"></i></a>
+          <a href="#" data-bs-toggle="tooltip"  title="My Wishlist"><i class="bi bi-heart fs-5 px-2"></i></a>
+      
+        </div>
+
+      </div>
+    </div>
+  </nav>
+  
+ 
+  
+
+  <!--History-->
+  <div class="container pt-5">
+    <div class="row">
+      <div class="col-lg-3 text-center m-auto">
+      <img src="{% static '/images/myntra.png' %}" alt="appicon" width="200px" height="180px">
+    </div>
+    </div>
+
+
+    <div class="row">
+      
+    <p>Established by Mukesh Bansal along with Ashutosh Lawania and Vineet Saxena; Myntra sold on-demand personalized
+      gift items. It mainly operated on the B2B (business-to-business) model during its initial years. Between 2007 and
+      2010, the site allowed customers to personalize products such as T-shirts, mugs, mouse pads, and others.[11]
+
+      In 2011, Myntra began selling fashion and lifestyle products and moved away from personalisation. By 2012 Myntra
+      offered products from 350 Indian and International brands. The website launched the brands Fastrack Watches and
+      Being Human.
+    </div>
+  </div>
+
+
+  
+  <div class="container" >
+    <hr>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+  
+  <!--footer-->
+<section id="footer mt-5 ">   
+<div class="container bg-white " >
+<div class="row  text-center m-auto" >
+    <div class="col-md-3" style="margin-top: 20px;">
+        
+        <ul class="foot" style="list-style-type:none;"  >
+            <h5 >Explore</h5><br>
+            <li> <a href="#">Sale</a></li>
+            <li> <a href="#">Store Locator</a></li>
+            <li> <a href="#">Gift Card</a></li>
+        </ul>
+    </div>
+    
+    <div class="col-md-3" style="margin-top: 20px;">
+        <ul class="foot" style="list-style-type: none;">
+            <h5>About</h5><br>
+            <li> <a href="#">Feedback</a></li>
+            <li> <a href="#">Careers</a></li>
+            <li> <a href="#">Take a tour</a></li>
+        </ul>
+    </div>
+
+    <div class="col-md-3" style="margin-top: 20px;">
+        <ul class="foot" style="list-style-type: none;">
+            <h5>Help</h5><br>
+            <li > <a href="#">Contact Us</a></li>
+            <li> <a href="#">Shipping</a></li>
+            <li> <a href="#">Return Policy</a></li>
+        </ul>
+    </div>
+
+   
+
+  </div>
+</div>
+</div>
+</section>
+
+
+
+<!--COPYright-->
+<div class="container-fluid  bg-secondary">
+<div class="row">
+  <div class="col-sm-12 text-center pt-3">
+    <p>Copyright &copy; 2022 Myntra - All rights reserved</p>
+  </div>
+</div>
+</div>
+<!--COPYright end-->
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+crossorigin="anonymous"></script>
+
+
+
+
+
+  <link href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+  <script src="/js/bootstrap.js"></script>
+</body>
+
+</html>

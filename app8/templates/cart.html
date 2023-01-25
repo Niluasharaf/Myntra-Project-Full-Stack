@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<section>
+    <div class="container text-center py-4">
+
+    <h1 class="my-4 py-4">Cart</h1>
+    <table class=" container text-center py-5 my-4" border="1">
+
+        <thead>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Link</th>
+        </thead>
+        {% for i in ob1 %}
+        <tr>
+            <td>{{i.iname}}</td>
+            <td>{{i.iprice}}</td>
+            <td>{{i.quantity}}</td>
+            <td>{{i.total}}</td>
+            <td><a href="/review/{{i.id}}">Reviews</a></td>
+         
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+</section>
+
+{% endblock %}
+
+
